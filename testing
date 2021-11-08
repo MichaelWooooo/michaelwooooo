@@ -1,0 +1,13 @@
+struct MoonStar: View {
+var isRain: Bool
+var body: some View {
+print(“create MoonStar body，下雨嗎 \(isRain)”)
+return Image(systemName: isRain ? “cloud.moon.rain.fill” : “moon.stars.fill”)
+.resizable()
+.frame(width: 100, height: 100)
+.foregroundColor(.yellow)
+.padding()
+.background(Color.black)
+.clipShape(Circle())
+}
+}
